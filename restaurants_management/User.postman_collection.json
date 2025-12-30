@@ -1,0 +1,86 @@
+{
+	"info": {
+		"_postman_id": "2127f998-e7cc-47d1-a90f-100481a689e4",
+		"name": "User",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "46094730",
+		"_collection_link": "https://www.postman.com/workspace/BT-node53~35ee44a5-8c45-4a68-b194-22e8697dad84/collection/46094730-2127f998-e7cc-47d1-a90f-100481a689e4?action=share&source=collection_link&creator=46094730"
+	},
+	"item": [
+		{
+			"name": "Liked Restaurant",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/user/favoriteRes?userId=1",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"user",
+						"favoriteRes"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Rated Restaurant",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/user/ratedRes?userId=10",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"user",
+						"ratedRes"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": 9,\r\n    \"foodId\": 5,\r\n    \"amount\": 1,\r\n    \"code\": \"\",\r\n    \"subFoodId\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/user/order",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"user",
+						"order"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
